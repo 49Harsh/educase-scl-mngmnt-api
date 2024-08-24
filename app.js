@@ -27,6 +27,10 @@ createSchoolsTable();
 
 app.use('/api', schoolRoutes);
 
+app.use('/',(req,res) =>{
+    res.send('<h1>Welcome to the API</h1>')
+})
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
